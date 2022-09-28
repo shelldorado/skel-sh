@@ -5,6 +5,7 @@ declare -A meta_=() && meta_=(
     [info]="bash4+ skelleton"
     [version]="0.1"
     [date]="2022-09-28"
+    [license]="GNU GPLv3+ (see https://www.gnu.org/licenses/gpl-3.0.txt)"
     [author]="shelldorado"
     [usage]="COMMAND [OPTION]"
 )                                                                               &&
@@ -29,8 +30,9 @@ declare -A com_=() && com_=(
 com_help() {
     declare -a out__=() && out__=(
         "# ${meta_[name]}" "${meta_[info]}"                             $'\n'
-        "## VERSION"       "  ${meta_[version]} (${meta_[date]})"       $'\n'
         "## USAGE"         "  ${0} ${meta_[usage]}"                     $'\n'
+        "## VERSION"       "  ${meta_[version]} (${meta_[date]})"       $'\n'
+        "## LICENSE"       "${meta_[license]}"                          $'\n'
         "## COMMANDS" ''
     )                                                                           &&
     while IFS= read -r line ; do
@@ -78,4 +80,4 @@ run() {
     : || return 1
 }                                                                               &&
 run "${@}"
- 
+
