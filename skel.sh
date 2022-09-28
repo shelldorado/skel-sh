@@ -12,7 +12,7 @@ declare -A meta_=() && meta_=(
 
 ## CONFIG
 declare -A conf_=() && conf_=(
-    [pwd]="${PWD}"
+    [ts]="$( date +%s )"
 )                                                                               &&
 
 ## PATH
