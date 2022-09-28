@@ -1,0 +1,2 @@
+# skel-sh
+Bash skelleton
